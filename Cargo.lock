@@ -39,18 +39,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "afl"
-version = "0.15.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c21e10b6947189c5ff61343b5354e9ad1c1722bd47b69cd0a6b49e5fa7f7ecf6"
-dependencies = [
- "home",
- "libc",
- "rustc_version",
- "xdg",
-]
-
-[[package]]
 name = "ahash"
 version = "0.7.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1385,6 +1373,105 @@ name = "itoa"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "453ad9f582a441959e5f0d088b02ce04cfe8d51a8eaf077f12ac6d3e94164ca6"
+
+[[package]]
+name = "jdrouet-vrl"
+version = "0.17.0"
+dependencies = [
+ "aes",
+ "ansi_term",
+ "anyhow",
+ "arbitrary",
+ "base16",
+ "base62",
+ "base64 0.22.1",
+ "bytes",
+ "cbc",
+ "cfb-mode",
+ "cfg-if",
+ "chacha20poly1305",
+ "charset",
+ "chrono",
+ "chrono-tz",
+ "cidr-utils",
+ "clap",
+ "codespan-reporting",
+ "community-id",
+ "convert_case 0.6.0",
+ "criterion",
+ "crypto_secretbox",
+ "csv",
+ "ctr",
+ "data-encoding",
+ "digest",
+ "dns-lookup",
+ "domain",
+ "dyn-clone",
+ "exitcode",
+ "flate2",
+ "grok",
+ "hex",
+ "hmac",
+ "hostname",
+ "iana-time-zone",
+ "idna 0.5.0",
+ "indexmap 2.3.0",
+ "indoc",
+ "itertools 0.13.0",
+ "lalrpop",
+ "lalrpop-util",
+ "md-5",
+ "mlua",
+ "nom",
+ "ofb",
+ "once_cell",
+ "onig",
+ "ordered-float",
+ "paste",
+ "peeking_take_while",
+ "percent-encoding",
+ "pest",
+ "pest_derive",
+ "prettydiff",
+ "prettytable-rs",
+ "proptest",
+ "proptest-derive",
+ "prost",
+ "prost-reflect",
+ "psl",
+ "psl-types",
+ "publicsuffix",
+ "quickcheck",
+ "quoted_printable",
+ "rand",
+ "regex",
+ "roxmltree",
+ "rust_decimal",
+ "rustyline",
+ "seahash",
+ "serde",
+ "serde_json",
+ "sha-1",
+ "sha2",
+ "sha3",
+ "snafu",
+ "snap",
+ "strip-ansi-escapes",
+ "syslog_loose",
+ "termcolor",
+ "thiserror",
+ "tokio",
+ "toml",
+ "tracing",
+ "tracing-test",
+ "uaparser",
+ "url",
+ "utf8-width",
+ "uuid",
+ "webbrowser",
+ "woothee",
+ "zstd",
+]
 
 [[package]]
 name = "jni"
@@ -3031,26 +3118,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tikv-jemalloc-sys"
-version = "0.6.0+5.3.0-1-ge13ca993e8ccb9ba9847cc330696e02839f328f7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd3c60906412afa9c2b5b5a48ca6a5abe5736aec9eb48ad05037a677e52e4e2d"
-dependencies = [
- "cc",
- "libc",
-]
-
-[[package]]
-name = "tikv-jemallocator"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4cec5ff18518d81584f477e9bfdf957f5bb0979b0bac3af4ca30b5b3ae2d2865"
-dependencies = [
- "libc",
- "tikv-jemalloc-sys",
-]
-
-[[package]]
 name = "time"
 version = "0.3.34"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3392,133 +3459,6 @@ name = "version_check"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
-
-[[package]]
-name = "vrl"
-version = "0.17.0"
-dependencies = [
- "aes",
- "ansi_term",
- "anyhow",
- "arbitrary",
- "base16",
- "base62",
- "base64 0.22.1",
- "bytes",
- "cbc",
- "cfb-mode",
- "cfg-if",
- "chacha20poly1305",
- "charset",
- "chrono",
- "chrono-tz",
- "cidr-utils",
- "clap",
- "codespan-reporting",
- "community-id",
- "convert_case 0.6.0",
- "criterion",
- "crypto_secretbox",
- "csv",
- "ctr",
- "data-encoding",
- "digest",
- "dns-lookup",
- "domain",
- "dyn-clone",
- "exitcode",
- "flate2",
- "grok",
- "hex",
- "hmac",
- "hostname",
- "iana-time-zone",
- "idna 0.5.0",
- "indexmap 2.3.0",
- "indoc",
- "itertools 0.13.0",
- "lalrpop",
- "lalrpop-util",
- "md-5",
- "mlua",
- "nom",
- "ofb",
- "once_cell",
- "onig",
- "ordered-float",
- "paste",
- "peeking_take_while",
- "percent-encoding",
- "pest",
- "pest_derive",
- "prettydiff",
- "prettytable-rs",
- "proptest",
- "proptest-derive",
- "prost",
- "prost-reflect",
- "psl",
- "psl-types",
- "publicsuffix",
- "quickcheck",
- "quoted_printable",
- "rand",
- "regex",
- "roxmltree",
- "rust_decimal",
- "rustyline",
- "seahash",
- "serde",
- "serde_json",
- "sha-1",
- "sha2",
- "sha3",
- "snafu",
- "snap",
- "strip-ansi-escapes",
- "syslog_loose",
- "termcolor",
- "thiserror",
- "tokio",
- "toml",
- "tracing",
- "tracing-test",
- "uaparser",
- "url",
- "utf8-width",
- "uuid",
- "webbrowser",
- "woothee",
- "zstd",
-]
-
-[[package]]
-name = "vrl-cli"
-version = "0.1.0"
-dependencies = [
- "clap",
- "vrl",
-]
-
-[[package]]
-name = "vrl-fuzz"
-version = "0.1.0"
-dependencies = [
- "afl",
- "vrl",
-]
-
-[[package]]
-name = "vrl-tests"
-version = "0.1.0"
-dependencies = [
- "chrono-tz",
- "clap",
- "glob",
- "tikv-jemallocator",
- "tracing-subscriber",
- "vrl",
-]
 
 [[package]]
 name = "vte"
@@ -3934,15 +3874,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "05f360fc0b24296329c78fda852a1e9ae82de9cf7b27dae4b7f62f118f77b9ed"
 dependencies = [
  "tap",
-]
-
-[[package]]
-name = "xdg"
-version = "2.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "688597db5a750e9cad4511cb94729a078e274308099a0382b5b8203bbc767fee"
-dependencies = [
- "home",
 ]
 
 [[package]]
